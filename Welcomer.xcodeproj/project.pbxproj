@@ -11,6 +11,10 @@
 		224C132D272D74B300213500 /* Welcomer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 224C1322272D74B300213500 /* Welcomer.framework */; };
 		224C1332272D74B300213500 /* WelcomerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C1331272D74B300213500 /* WelcomerTests.swift */; };
 		224C1333272D74B400213500 /* Welcomer.h in Headers */ = {isa = PBXBuildFile; fileRef = 224C1325272D74B300213500 /* Welcomer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		224C133F272D816200213500 /* InputValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C133E272D816200213500 /* InputValidator.swift */; };
+		224C1341272D823300213500 /* InputValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C1340272D823300213500 /* InputValidatorTests.swift */; };
+		224C1344272D829100213500 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C1343272D829100213500 /* LogInViewController.swift */; };
+		224C1347272D83B700213500 /* LogInContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C1346272D83B700213500 /* LogInContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		224C1326272D74B300213500 /* Welcomer.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Welcomer.docc; sourceTree = "<group>"; };
 		224C132C272D74B300213500 /* WelcomerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WelcomerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		224C1331272D74B300213500 /* WelcomerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomerTests.swift; sourceTree = "<group>"; };
+		224C133E272D816200213500 /* InputValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidator.swift; sourceTree = "<group>"; };
+		224C1340272D823300213500 /* InputValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidatorTests.swift; sourceTree = "<group>"; };
+		224C1343272D829100213500 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		224C1346272D83B700213500 /* LogInContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,9 @@
 			children = (
 				224C1325272D74B300213500 /* Welcomer.h */,
 				224C1326272D74B300213500 /* Welcomer.docc */,
+				224C1342272D826E00213500 /* Services */,
+				224C1345272D833F00213500 /* Controllers */,
+				224C1348272D850A00213500 /* Views */,
 			);
 			path = Welcomer;
 			sourceTree = "<group>";
@@ -81,8 +92,33 @@
 			isa = PBXGroup;
 			children = (
 				224C1331272D74B300213500 /* WelcomerTests.swift */,
+				224C1340272D823300213500 /* InputValidatorTests.swift */,
 			);
 			path = WelcomerTests;
+			sourceTree = "<group>";
+		};
+		224C1342272D826E00213500 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				224C133E272D816200213500 /* InputValidator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		224C1345272D833F00213500 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				224C1343272D829100213500 /* LogInViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		224C1348272D850A00213500 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				224C1346272D83B700213500 /* LogInContainerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +231,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				224C1327272D74B300213500 /* Welcomer.docc in Sources */,
+				224C133F272D816200213500 /* InputValidator.swift in Sources */,
+				224C1347272D83B700213500 /* LogInContainerView.swift in Sources */,
+				224C1344272D829100213500 /* LogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				224C1332272D74B300213500 /* WelcomerTests.swift in Sources */,
+				224C1341272D823300213500 /* InputValidatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +438,7 @@
 		224C133A272D74B400213500 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BJDJ2WV87J;
@@ -419,6 +460,7 @@
 		224C133B272D74B400213500 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BJDJ2WV87J;
