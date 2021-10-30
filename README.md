@@ -72,5 +72,5 @@ Framework is build with customizable validator that is validatin input in text f
 
 ## Example 
 
-<img width="437" alt="Screenshot 2021-10-30 at 19 07 49" src="https://user-images.githubusercontent.com/86830475/139542557-6e49ae05-09c0-431f-b700-bda1ba04b5ad.png"> <img width="434" alt="Screenshot 2021-10-30 at 19 07 55" src="https://user-images.githubusercontent.com/86830475/139542567-e6a81983-d8bb-4850-bc3c-7ff76c5922d3.png">
+<img width="437" alt="Screenshot 2021-10-30 at 19 07 49" src="https://user-images.githubusercontent.com/86830475/139542557-6e49ae05-09c0-431f-b700-bda1ba04b5ad.png"><img width="434" alt="Screenshot 2021-10-30 at 19 07 55" src="https://user-images.githubusercontent.com/86830475/139542567-e6a81983-d8bb-4850-bc3c-7ff76c5922d3.png">
 
