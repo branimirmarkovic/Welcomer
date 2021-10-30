@@ -15,6 +15,19 @@
 		224C1341272D823300213500 /* InputValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C1340272D823300213500 /* InputValidatorTests.swift */; };
 		224C1344272D829100213500 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C1343272D829100213500 /* LogInViewController.swift */; };
 		224C1347272D83B700213500 /* LogInContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C1346272D83B700213500 /* LogInContainerView.swift */; };
+		224C134D272D895000213500 /* BackgroundThemeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C134C272D895000213500 /* BackgroundThemeConfiguration.swift */; };
+		224C134F272D897000213500 /* LabelThemeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C134E272D897000213500 /* LabelThemeConfiguration.swift */; };
+		224C1351272D898500213500 /* TextFieldThemeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C1350272D898500213500 /* TextFieldThemeConfiguration.swift */; };
+		224C1353272D89D900213500 /* QuestionLabelThemeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C1352272D89D900213500 /* QuestionLabelThemeConfiguration.swift */; };
+		224C1355272D89F600213500 /* ButtonThemeConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C1354272D89F600213500 /* ButtonThemeConfiguration.swift */; };
+		224C1359272D8A7100213500 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C1358272D8A7100213500 /* Delegate.swift */; };
+		224C135B272D8A9100213500 /* ThemeSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C135A272D8A9100213500 /* ThemeSource.swift */; };
+		224C1363272DA1ED00213500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C1362272DA1ED00213500 /* AppDelegate.swift */; };
+		224C1365272DA1ED00213500 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C1364272DA1ED00213500 /* SceneDelegate.swift */; };
+		224C1367272DA1ED00213500 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224C1366272DA1ED00213500 /* ViewController.swift */; };
+		224C136A272DA1ED00213500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224C1368272DA1ED00213500 /* Main.storyboard */; };
+		224C136C272DA1EF00213500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224C136B272DA1EF00213500 /* Assets.xcassets */; };
+		224C136F272DA1EF00213500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224C136D272DA1EF00213500 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +50,21 @@
 		224C1340272D823300213500 /* InputValidatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidatorTests.swift; sourceTree = "<group>"; };
 		224C1343272D829100213500 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		224C1346272D83B700213500 /* LogInContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInContainerView.swift; sourceTree = "<group>"; };
+		224C134C272D895000213500 /* BackgroundThemeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundThemeConfiguration.swift; sourceTree = "<group>"; };
+		224C134E272D897000213500 /* LabelThemeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelThemeConfiguration.swift; sourceTree = "<group>"; };
+		224C1350272D898500213500 /* TextFieldThemeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldThemeConfiguration.swift; sourceTree = "<group>"; };
+		224C1352272D89D900213500 /* QuestionLabelThemeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionLabelThemeConfiguration.swift; sourceTree = "<group>"; };
+		224C1354272D89F600213500 /* ButtonThemeConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonThemeConfiguration.swift; sourceTree = "<group>"; };
+		224C1358272D8A7100213500 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
+		224C135A272D8A9100213500 /* ThemeSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeSource.swift; sourceTree = "<group>"; };
+		224C1360272DA1ED00213500 /* Demo app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		224C1362272DA1ED00213500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		224C1364272DA1ED00213500 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		224C1366272DA1ED00213500 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		224C1369272DA1ED00213500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		224C136B272DA1EF00213500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		224C136E272DA1EF00213500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		224C1370272DA1EF00213500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +83,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		224C135D272DA1ED00213500 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +98,7 @@
 			children = (
 				224C1324272D74B300213500 /* Welcomer */,
 				224C1330272D74B300213500 /* WelcomerTests */,
+				224C1361272DA1ED00213500 /* Demo app */,
 				224C1323272D74B300213500 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +108,7 @@
 			children = (
 				224C1322272D74B300213500 /* Welcomer.framework */,
 				224C132C272D74B300213500 /* WelcomerTests.xctest */,
+				224C1360272DA1ED00213500 /* Demo app.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,11 +116,11 @@
 		224C1324272D74B300213500 /* Welcomer */ = {
 			isa = PBXGroup;
 			children = (
+				224C1356272D8A4900213500 /* LogIn */,
+				224C134B272D893F00213500 /* ThemeConfigurations */,
 				224C1325272D74B300213500 /* Welcomer.h */,
 				224C1326272D74B300213500 /* Welcomer.docc */,
 				224C1342272D826E00213500 /* Services */,
-				224C1345272D833F00213500 /* Controllers */,
-				224C1348272D850A00213500 /* Views */,
 			);
 			path = Welcomer;
 			sourceTree = "<group>";
@@ -119,6 +156,51 @@
 				224C1346272D83B700213500 /* LogInContainerView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		224C134B272D893F00213500 /* ThemeConfigurations */ = {
+			isa = PBXGroup;
+			children = (
+				224C134C272D895000213500 /* BackgroundThemeConfiguration.swift */,
+				224C134E272D897000213500 /* LabelThemeConfiguration.swift */,
+				224C1350272D898500213500 /* TextFieldThemeConfiguration.swift */,
+				224C1352272D89D900213500 /* QuestionLabelThemeConfiguration.swift */,
+				224C1354272D89F600213500 /* ButtonThemeConfiguration.swift */,
+			);
+			path = ThemeConfigurations;
+			sourceTree = "<group>";
+		};
+		224C1356272D8A4900213500 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				224C1357272D8A5F00213500 /* Protocols */,
+				224C1348272D850A00213500 /* Views */,
+				224C1345272D833F00213500 /* Controllers */,
+			);
+			path = LogIn;
+			sourceTree = "<group>";
+		};
+		224C1357272D8A5F00213500 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				224C1358272D8A7100213500 /* Delegate.swift */,
+				224C135A272D8A9100213500 /* ThemeSource.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		224C1361272DA1ED00213500 /* Demo app */ = {
+			isa = PBXGroup;
+			children = (
+				224C1362272DA1ED00213500 /* AppDelegate.swift */,
+				224C1364272DA1ED00213500 /* SceneDelegate.swift */,
+				224C1366272DA1ED00213500 /* ViewController.swift */,
+				224C1368272DA1ED00213500 /* Main.storyboard */,
+				224C136B272DA1EF00213500 /* Assets.xcassets */,
+				224C136D272DA1EF00213500 /* LaunchScreen.storyboard */,
+				224C1370272DA1EF00213500 /* Info.plist */,
+			);
+			path = "Demo app";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +253,23 @@
 			productReference = 224C132C272D74B300213500 /* WelcomerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		224C135F272DA1ED00213500 /* Demo app */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 224C1387272DA1EF00213500 /* Build configuration list for PBXNativeTarget "Demo app" */;
+			buildPhases = (
+				224C135C272DA1ED00213500 /* Sources */,
+				224C135D272DA1ED00213500 /* Frameworks */,
+				224C135E272DA1ED00213500 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Demo app";
+			productName = "Demo app";
+			productReference = 224C1360272DA1ED00213500 /* Demo app.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -185,6 +284,9 @@
 						CreatedOnToolsVersion = 13.1;
 					};
 					224C132B272D74B300213500 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					224C135F272DA1ED00213500 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
@@ -204,6 +306,7 @@
 			targets = (
 				224C1321272D74B300213500 /* Welcomer */,
 				224C132B272D74B300213500 /* WelcomerTests */,
+				224C135F272DA1ED00213500 /* Demo app */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +326,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		224C135E272DA1ED00213500 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224C136F272DA1EF00213500 /* LaunchScreen.storyboard in Resources */,
+				224C136C272DA1EF00213500 /* Assets.xcassets in Resources */,
+				224C136A272DA1ED00213500 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -232,7 +345,14 @@
 			files = (
 				224C1327272D74B300213500 /* Welcomer.docc in Sources */,
 				224C133F272D816200213500 /* InputValidator.swift in Sources */,
+				224C135B272D8A9100213500 /* ThemeSource.swift in Sources */,
+				224C134D272D895000213500 /* BackgroundThemeConfiguration.swift in Sources */,
+				224C1353272D89D900213500 /* QuestionLabelThemeConfiguration.swift in Sources */,
+				224C134F272D897000213500 /* LabelThemeConfiguration.swift in Sources */,
+				224C1355272D89F600213500 /* ButtonThemeConfiguration.swift in Sources */,
 				224C1347272D83B700213500 /* LogInContainerView.swift in Sources */,
+				224C1351272D898500213500 /* TextFieldThemeConfiguration.swift in Sources */,
+				224C1359272D8A7100213500 /* Delegate.swift in Sources */,
 				224C1344272D829100213500 /* LogInViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +366,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		224C135C272DA1ED00213500 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				224C1367272DA1ED00213500 /* ViewController.swift in Sources */,
+				224C1363272DA1ED00213500 /* AppDelegate.swift in Sources */,
+				224C1365272DA1ED00213500 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -255,6 +385,25 @@
 			targetProxy = 224C132E272D74B300213500 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		224C1368272DA1ED00213500 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				224C1369272DA1ED00213500 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		224C136D272DA1EF00213500 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				224C136E272DA1EF00213500 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		224C1334272D74B400213500 /* Debug */ = {
@@ -479,6 +628,62 @@
 			};
 			name = Release;
 		};
+		224C1388272DA1EF00213500 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BJDJ2WV87J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Demo app/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "personal.Demo-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		224C1389272DA1EF00213500 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = BJDJ2WV87J;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Demo app/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "personal.Demo-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -505,6 +710,15 @@
 			buildConfigurations = (
 				224C133A272D74B400213500 /* Debug */,
 				224C133B272D74B400213500 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		224C1387272DA1EF00213500 /* Build configuration list for PBXNativeTarget "Demo app" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				224C1388272DA1EF00213500 /* Debug */,
+				224C1389272DA1EF00213500 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
