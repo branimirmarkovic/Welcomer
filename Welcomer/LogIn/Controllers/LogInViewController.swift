@@ -7,27 +7,35 @@
 
 import UIKit
 
- protocol LogInContainerViewDelegate : AnyObject {
-    func questionButtonTapped()
-    func logInTapped(password: String?, email: String?,validCredentials: Bool)
-}
 
-final class LogInContainerVC : UIViewController {
+
+
+
+final public class LogInContainerVC : UIViewController {
 
     private var validator = InputValidator()
 
-    weak var delegate: LogInContainerViewDelegate?
+    weak  var delegate: LogInContainerViewDelegate?
+    weak  var themeSource: LogInContainerViewThemeSource?
 
-    override func loadView() {
+    public override func loadView() {
         view = LogInContainerView()
     }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
+        theme()
         configureActions()
     }
 
-    public func constraintToSuperView(_ superView: UIView) {
+    public func setManager(_ manager: UIViewController & LogInContainerViewThemeSource & LogInContainerViewDelegate) {
+        delegate = manager
+        themeSource = manager
+        manager.view.addSubview(self.view)
+        constraintToSuperView(manager.view)
+    }
+
+    private func constraintToSuperView(_ superView: UIView) {
         self.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             self.view.centerXAnchor.constraint(equalTo: superView.centerXAnchor),
@@ -36,6 +44,10 @@ final class LogInContainerVC : UIViewController {
             self.view.heightAnchor.constraint(equalToConstant: 380)
         ])
     }
+
+}
+
+extension LogInContainerVC {
 
     private func configureActions() {
         let view = view as! LogInContainerView
@@ -81,6 +93,51 @@ final class LogInContainerVC : UIViewController {
 
     @objc private func questionButtonTapped() {
         delegate?.questionButtonTapped()
+    }
+
+    // MARK: - Theme Methods
+    private func theme() {
+        themeBackgroundView()
+        themeTitleLabel()
+        themeTextFields()
+        themeQuestionLabel()
+        themeButton()
+    }
+
+    private func themeBackgroundView() {
+        guard let configuration = themeSource?.themeForBackgroundView(),
+        let view = view as? LogInContainerView else {return}
+
+        view.themeView(from: configuration)
+    }
+
+    private func themeTitleLabel() {
+        guard let configuration = themeSource?.themeForLogInLabel(),
+        let view = view as? LogInContainerView else {return}
+
+        view.themeTitleLabel(from: configuration)
+    }
+
+    private func themeTextFields() {
+        guard let configuration = themeSource?.themeForTextFields(),
+        let view = view as? LogInContainerView else {return}
+
+        view.themeTextFields(from: configuration)
+    }
+
+    private func themeQuestionLabel() {
+        guard let configuration = themeSource?.themeForQuestionLabel(),
+              let view = view as? LogInContainerView else {return}
+
+        view.themeQuestionLabel(from: configuration)
+    }
+
+    private func themeButton() {
+        guard let configuration = themeSource?.themeForButton(),
+              let view = view as? LogInContainerView else {return}
+
+        view.themeButton(from: configuration)
+
     }
 
 }

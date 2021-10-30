@@ -13,6 +13,7 @@ class LogInContainerView: UIView {
     var titleLabel : UILabel = {
        let label = UILabel()
         label.text = "Log In"
+        label.textAlignment = .center
         return label
     }()
 
@@ -123,5 +124,30 @@ class LogInContainerView: UIView {
             logInButton.widthAnchor.constraint(equalToConstant: 170)
         ])
     }
+}
+// MARK: - Theme Methods
+extension LogInContainerView {
+
+     func themeView(from config: BackgroundThemeConfiguration) {
+         config.theme(self)
+    }
+
+     func themeTitleLabel(from config: LabelThemeConfiguration) {
+         config.theme(titleLabel)
+    }
+
+     func themeTextFields(from config: TextFieldThemeConfiguration) {
+         config.theme(emailTextField)
+         config.theme(passwordTextField)
+    }
+
+     func themeQuestionLabel(from config: QuestionLabelThemeConfiguration) {
+         config.theme(questionSingInButton)
+    }
+
+     func themeButton(from config: ButtonThemeConfiguration) {
+         config.theme(logInButton)
+    }
+
 }
 
