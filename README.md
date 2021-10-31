@@ -67,7 +67,7 @@ extension ViewController: LogInContainerViewThemeSource {
 
 ## Features
 
-Framework is build with customizable validator that is validatin input in text fields.
+Framework is build with customizable validator that is validating input from text fields.
 
 
 ## Example 
