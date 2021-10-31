@@ -3,8 +3,8 @@
 
 ## Introduction
 
-Welcomer is framwerk providing basic UI Controllers for Log in and Sign In pages.
-Framework is currently in development. Feel free to contribute.
+Welcomer is framwork that is providing basic UI Controllers for Log in and Sign In pages.
+Currently it is in development. Feel free to contribute.
 
 ## Setup
 
