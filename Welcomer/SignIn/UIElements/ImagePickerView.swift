@@ -8,7 +8,7 @@
 import UIKit
 
 protocol ProfileImagePickerDelegate: AnyObject {
-    func imagePicked(image: UIImage)
+    func imagePicked(image: UIImage?)
 }
 
 class ProfileImagePickerVC {
@@ -25,7 +25,8 @@ class ProfileImagePickerVC {
     }
 
     @objc func pickImageButtonTapped() {
-        delegate?.imagePicked(image: UIImage())
+        // TODO: Open image picker
+        
     }
 
 }

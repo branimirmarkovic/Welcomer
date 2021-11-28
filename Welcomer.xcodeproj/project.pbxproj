@@ -28,6 +28,7 @@
 		224C136A272DA1ED00213500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224C1368272DA1ED00213500 /* Main.storyboard */; };
 		224C136C272DA1EF00213500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 224C136B272DA1EF00213500 /* Assets.xcassets */; };
 		224C136F272DA1EF00213500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 224C136D272DA1EF00213500 /* LaunchScreen.storyboard */; };
+		22CA25402753DFDF00901FBA /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22CA253F2753DFDF00901FBA /* Credentials.swift */; };
 		22DE09BE273FF7AB00B31C95 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DE09BD273FF7AB00B31C95 /* SignInViewController.swift */; };
 		22DE09C0273FF7C000B31C95 /* SignInContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DE09BF273FF7C000B31C95 /* SignInContainerView.swift */; };
 		22DE09C3273FF8F400B31C95 /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22DE09C2273FF8F400B31C95 /* ImagePickerView.swift */; };
@@ -72,6 +73,7 @@
 		224C136B272DA1EF00213500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		224C136E272DA1EF00213500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		224C1370272DA1EF00213500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22CA253F2753DFDF00901FBA /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		22DE09BD273FF7AB00B31C95 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		22DE09BF273FF7C000B31C95 /* SignInContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInContainerView.swift; sourceTree = "<group>"; };
 		22DE09C2273FF8F400B31C95 /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
@@ -219,6 +221,14 @@
 			path = "Demo app";
 			sourceTree = "<group>";
 		};
+		22CA253E2753DFD000901FBA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				22CA253F2753DFDF00901FBA /* Credentials.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		22DE09C1273FF8E000B31C95 /* UIElements */ = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +241,7 @@
 		22DE09C6273FFBA400B31C95 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				22CA253E2753DFD000901FBA /* Model */,
 				22DE09C8273FFBC300B31C95 /* Protocols */,
 				22DE09C9273FFBCC00B31C95 /* Controllers */,
 				22DE09C7273FFBB600B31C95 /* Views */,
@@ -417,6 +428,7 @@
 				22DE09CB273FFC2700B31C95 /* SignInContainerViewThemeSource.swift in Sources */,
 				22DE09C5273FFAA300B31C95 /* ImagePickButton.swift in Sources */,
 				224C1347272D83B700213500 /* LogInContainerView.swift in Sources */,
+				22CA25402753DFDF00901FBA /* Credentials.swift in Sources */,
 				22DE09CD273FFC4100B31C95 /* SignInContainerViewDelegate.swift in Sources */,
 				22DE09BE273FF7AB00B31C95 /* SignInViewController.swift in Sources */,
 				224C1351272D898500213500 /* TextFieldThemeConfiguration.swift in Sources */,

@@ -15,6 +15,9 @@ class SignInContainerViewController: UIViewController {
     weak  var themeSource: SignInContainerViewThemeSource?
 
     var savedPassword: String?
+    var passwordRepetitionValid: Bool = false
+
+    var credentials: Credentials = Credentials()
 
     public override func loadView() {
         view = SignInContainerView()
@@ -60,12 +63,14 @@ extension SignInContainerViewController {
         view.signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
     }
 
+    @objc func photoPicked(photo: UIImage?) {
+
+    }
+
 
     @objc func fullNameTextFieldDidiFinishedEditing(sender: UITextField) {
-        let fullName = sender.text
-        let isValid = validator.validateFullName(fullName)
-
-        switch isValid {
+        credentials.fullName = sender.text
+        switch credentials.isValidFullName() {
         case true:
             ()
         case false:
@@ -75,10 +80,9 @@ extension SignInContainerViewController {
     }
 
     @objc func emailTextFieldDidFinishedEditing(sender: UITextField) {
-        let email = sender.text
-        let isValid = validator.validateEmail(email)
+        credentials.email = sender.text
 
-        switch isValid {
+        switch credentials.isValidEmail() {
         case true:
             ()
         case false:
@@ -89,12 +93,11 @@ extension SignInContainerViewController {
 
     @objc func passwordTextFieldDidFinishedEditing(sender: UITextField) {
 
-        let password = sender.text
-        let isValid = validator.validatePassword(password)
+        credentials.password = sender.text
 
-        switch isValid {
+        switch credentials.isValidPassword() {
         case true:
-            savedPassword = password
+            ()
         case false:
             ()
         }
@@ -102,17 +105,9 @@ extension SignInContainerViewController {
     }
 
     @objc func repeatPasswordTextFieldDidiFinishedEditing(sender: UITextField) {
-        let password = sender.text
-        let isValid = password == savedPassword && savedPassword != nil
-
-        switch isValid {
-        case true:
-            ()
-        case false:
-            ()
-        }
-        
-
+        let repeatedPassword = sender.text
+        let isValid = credentials.isValidPassword() && credentials.password == repeatedPassword
+        credentials.repeatedPasswordCorrect = isValid
     }
 
     @objc func questionButtonTapped () {
@@ -121,7 +116,14 @@ extension SignInContainerViewController {
     }
 
     @objc func signInButtonTapped() {
-        // TODO: handle password double check
+
+        switch credentials.credentialsValidForSignIn() {
+        case true:
+            delegate?.signInTapped(password: credentials.password, email: credentials.email, fullName: credentials.fullName, image: credentials.photo, validCredentials: true)
+        case false:
+            delegate?.signInTapped(password: credentials.password, email: credentials.email, fullName: credentials.fullName, image: credentials.photo, validCredentials: false)
+        }
+
 
     }
 
