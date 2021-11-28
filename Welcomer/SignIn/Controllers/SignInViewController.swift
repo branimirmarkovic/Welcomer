@@ -6,16 +6,13 @@
 //
 
 import UIKit
+import PhotosUI
 
 
-class SignInContainerViewController: UIViewController {
-    private var validator = InputValidator()
+final public class SignInContainerViewController: UIViewController {
 
     weak  var delegate: SignInContainerViewDelegate?
     weak  var themeSource: SignInContainerViewThemeSource?
-
-    var savedPassword: String?
-    var passwordRepetitionValid: Bool = false
 
     var credentials: Credentials = Credentials()
 
@@ -23,8 +20,10 @@ class SignInContainerViewController: UIViewController {
         view = SignInContainerView()
     }
 
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
+        theme()
+        configureActions()
     }
 
 
@@ -61,10 +60,11 @@ extension SignInContainerViewController {
         view.repeatPasswordTextField.addTarget(self, action: #selector(repeatPasswordTextFieldDidiFinishedEditing(sender:)), for: .editingDidEnd)
         view.questionSingInButton.addTarget(self, action: #selector(questionButtonTapped), for: .touchUpInside)
         view.signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
+        view.pickProfilePhotoImageViewController.delegate = self
     }
 
-    @objc func photoPicked(photo: UIImage?) {
-
+     func photoPicked(photo: UIImage?) {
+         credentials.photo = photo
     }
 
 
@@ -123,10 +123,76 @@ extension SignInContainerViewController {
         case false:
             delegate?.signInTapped(password: credentials.password, email: credentials.email, fullName: credentials.fullName, image: credentials.photo, validCredentials: false)
         }
+    }
 
+
+    // MARK: - Theme Methods
+    private func theme() {
+        themeBackgroundView()
+        themeImagePickerView()
+        themeTitleLabel()
+        themeTextFields()
+        themeQuestionLabel()
+        themeButton()
+    }
+
+    private func themeBackgroundView() {
+        guard let configuration = themeSource?.themeForBackgroundView(),
+        let view = view as? SignInContainerView else {return}
+
+        view.themeView(from: configuration)
+    }
+
+    private func themeImagePickerView() {
+        guard let configuration = themeSource?.themeForImagePickerView(),
+        let view = view as? SignInContainerView else {return}
+
+        view.themeImagePicker(from: configuration)
+    }
+
+    private func themeTitleLabel() {
+        guard let configuration = themeSource?.themeForLogInLabel(),
+        let view = view as? SignInContainerView else {return}
+
+        view.themeTitleLabel(from: configuration)
+    }
+
+    private func themeTextFields() {
+        guard let configuration = themeSource?.themeForTextFields(),
+        let view = view as? SignInContainerView else {return}
+
+        view.themeTextFields(from: configuration)
+    }
+
+    private func themeQuestionLabel() {
+        guard let configuration = themeSource?.themeForQuestionLabel(),
+              let view = view as? SignInContainerView else {return}
+
+        view.themeQuestionLabel(from: configuration)
+    }
+
+    private func themeButton() {
+        guard let configuration = themeSource?.themeForButton(),
+              let view = view as? SignInContainerView else {return}
+
+        view.themeButton(from: configuration)
 
     }
 
     
+
+}
+
+extension SignInContainerViewController : ProfileImagePickerDelegate {
+    func imagePicked(image: UIImage?) {
+        self.photoPicked(photo: image)
+    }
+
+    func presentPicker(picker: PHPickerViewController) {
+        self.present(picker, animated: true, completion: nil)
+    }
+
+
+
 
 }

@@ -6,28 +6,73 @@
 //
 
 import UIKit
+import PhotosUI
 
 protocol ProfileImagePickerDelegate: AnyObject {
     func imagePicked(image: UIImage?)
+    func presentPicker(picker: PHPickerViewController)
 }
 
 class ProfileImagePickerVC {
 
+
     weak var delegate: ProfileImagePickerDelegate?
-    var view: ProfileImagePickerView? {
-        didSet {
-            configureActions()
-        }
+    var view: ProfileImagePickerView
+
+    init () {
+        self.view = ProfileImagePickerView()
+        onInit()
+    }
+
+    func onInit() {
+        configureActions()
     }
 
     func configureActions() {
-        view?.imagePickButton.addTarget(self, action: #selector(pickImageButtonTapped), for: .touchUpInside)
+        view.imagePickButton.addTarget(self, action: #selector(pickImageButtonTapped), for: .touchUpInside)
     }
 
     @objc func pickImageButtonTapped() {
-        // TODO: Open image picker
-        
+        openImagePicker(caller: self)
     }
+
+    func openImagePicker(caller: PHPickerViewControllerDelegate) {
+        let picker: PHPickerViewController = {
+            var pickerConfiguration = PHPickerConfiguration()
+            pickerConfiguration.filter = .images
+            pickerConfiguration.selectionLimit = 1
+            return PHPickerViewController(configuration: pickerConfiguration)
+        }()
+        picker.delegate = caller
+        delegate?.presentPicker(picker: picker)
+    }
+
+}
+
+extension ProfileImagePickerVC: PHPickerViewControllerDelegate {
+    // TODO:  react to image picker errors
+    func picker(_ picker: PHPickerViewController, didFinishPicking results: [PHPickerResult]) {
+        guard results.isEmpty == false else {
+            picker.dismiss(animated: true, completion: nil)
+            return
+        }
+        for result in results {
+            let itemProvider = result.itemProvider
+            if itemProvider.canLoadObject(ofClass: UIImage.self) {
+                itemProvider.loadObject(ofClass: UIImage.self) {[weak self] image, error in
+                    if let image = image as? UIImage {
+                        DispatchQueue.main.async {
+                            self?.view.imageView.image = image
+                            self?.delegate?.imagePicked(image: image)
+                            picker.dismiss(animated: true, completion: nil)
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
 
 }
 

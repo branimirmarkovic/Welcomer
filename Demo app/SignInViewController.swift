@@ -1,39 +1,31 @@
 //
-//  ViewController.swift
+//  SignInViewController.swift
 //  Demo app
 //
-//  Created by Branimir Markovic on 30.10.21..
+//  Created by Branimir Markovic on 28.11.21..
 //
 
 import UIKit
 import Welcomer
 
-class ViewController: UIViewController {
 
-    let logInVC = LogInContainerVC()
+class SignInViewController: UIViewController {
+
+    let signInVC = SignInContainerViewController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        logInVC.setManager(self)
+        signInVC.setManager(self)
     }
-
 }
 
-extension ViewController: LogInContainerViewDelegate {
-    func questionButtonTapped() {
-
-    }
-
-    func logInTapped(password: String?, email: String?, validCredentials: Bool) {
-
-    }
-
-}
-
-extension ViewController: LogInContainerViewThemeSource {
-
+extension SignInViewController: SignInContainerViewThemeSource, SignInContainerViewDelegate {
     func themeForBackgroundView() -> BackgroundThemeConfiguration {
         BackgroundThemeConfiguration()
+    }
+
+    func themeForImagePickerView() -> ProfileImagePickerThemeConfiguration {
+        ProfileImagePickerThemeConfiguration()
     }
 
     func themeForLogInLabel() -> LabelThemeConfiguration {
@@ -52,7 +44,15 @@ extension ViewController: LogInContainerViewThemeSource {
         ButtonThemeConfiguration()
     }
 
+
+    func questionButtonTapped() {
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    func signInTapped(password: String?, email: String?, fullName: String?, image: UIImage?, validCredentials: Bool) {
+
+
+    }
+
+
 }
-
-
-

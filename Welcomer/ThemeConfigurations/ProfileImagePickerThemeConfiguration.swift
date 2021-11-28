@@ -14,7 +14,7 @@ public class ProfileImagePickerThemeConfiguration {
     var secondaryColor: UIColor
     var cornerRadius: CGFloat
     
-    internal init(primaryColor: UIColor = .systemGray, secondaryColor: UIColor = .systemGray2, cornerRadius: CGFloat = 0) {
+    public init(primaryColor: UIColor = .systemGray, secondaryColor: UIColor = .systemGray2, cornerRadius: CGFloat = 0) {
         self.primaryColor = primaryColor
         self.secondaryColor = secondaryColor
         self.cornerRadius = cornerRadius
@@ -27,9 +27,6 @@ public class ProfileImagePickerThemeConfiguration {
 
         imagePicker.backgroundView.layer.cornerRadius = cornerRadius
         imagePicker.imageView.layer.cornerRadius = cornerRadius
-
-
-
     }
 
 

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 
 
@@ -17,7 +18,7 @@ struct Credentials {
     var password: String?
     var repeatedPasswordCorrect: Bool = false
     var fullName: String?
-    var photo: Data?
+    var photo: UIImage?
 
     func isValidEmail() -> Bool {
         validator.validateEmail(email)

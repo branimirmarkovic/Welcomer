@@ -11,9 +11,9 @@ import UIKit
 class SignInContainerView: UIView {
 
 
-    var pickProfilePhotoImageView: ProfileImagePickerView = {
-        let imageView = ProfileImagePickerView()
-        return imageView
+    var pickProfilePhotoImageViewController: ProfileImagePickerVC = {
+        let vc = ProfileImagePickerVC()
+        return vc
     }()
 
     var titleLabel : UILabel = {
@@ -78,7 +78,7 @@ class SignInContainerView: UIView {
     }
 
     private func addSubviews() {
-        addSubview(pickProfilePhotoImageView)
+        addSubview(pickProfilePhotoImageViewController.view)
         addSubview(titleLabel)
         addSubview(fullNameTextField)
         addSubview(emailTextField)
@@ -100,12 +100,12 @@ class SignInContainerView: UIView {
     }
 
     private func constrainProfilePhotoImageView() {
-        pickProfilePhotoImageView.translatesAutoresizingMaskIntoConstraints = false
+        pickProfilePhotoImageViewController.view.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            pickProfilePhotoImageView.topAnchor.constraint(equalTo: self.topAnchor),
-            pickProfilePhotoImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
-            pickProfilePhotoImageView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            pickProfilePhotoImageView.heightAnchor.constraint(equalToConstant: 210)
+            pickProfilePhotoImageViewController.view.topAnchor.constraint(equalTo: self.topAnchor),
+            pickProfilePhotoImageViewController.view.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            pickProfilePhotoImageViewController.view.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            pickProfilePhotoImageViewController.view.heightAnchor.constraint(equalToConstant: 210)
         ])
 
     }
@@ -113,7 +113,7 @@ class SignInContainerView: UIView {
     private func constraintTitleLabel() {
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: pickProfilePhotoImageView.bottomAnchor,constant: 20),
+            titleLabel.topAnchor.constraint(equalTo: pickProfilePhotoImageViewController.view.bottomAnchor,constant: 20),
             titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             titleLabel.heightAnchor.constraint(equalToConstant: 40),
             titleLabel.widthAnchor.constraint(equalToConstant: 270)
@@ -215,7 +215,7 @@ extension SignInContainerView {
     }
 
     func themeImagePicker( from config: ProfileImagePickerThemeConfiguration) {
-        config.theme(pickProfilePhotoImageView)
+        config.theme(pickProfilePhotoImageViewController.view)
     }
 
 }
